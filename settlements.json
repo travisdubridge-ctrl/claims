@@ -1,0 +1,152 @@
+{
+ "updated": "2026-10-02",
+ "items": [
+  {
+   "id": "flo-health",
+   "name": "Flo period tracker app privacy",
+   "payout": "Pro rata share of $59.5M",
+   "who": "Used the Flo app between Nov 2016 and Feb 2019 and entered period or pregnancy info.",
+   "details": "You attest you used the app; no screenshots or receipts. California users get a double share.",
+   "deadline": "2026-10-15",
+   "url": "https://www.periodtrackerdataprivacylitigation.com/",
+   "direct": false,
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "vsl3",
+   "name": "VSL#3 probiotic",
+   "payout": "$20 with no receipt",
+   "who": "Bought VSL#3 probiotic in the US between June 1, 2016 and June 19, 2019.",
+   "details": "No proof: $20 for one unit, one per household. With receipts: up to $800.",
+   "deadline": "2026-10-20",
+   "url": "https://www.vsl3lawsuit.com/",
+   "direct": false,
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "pork",
+   "name": "Pork price-fixing (bacon, raw pork)",
+   "payout": "Pro rata share of $117M",
+   "who": "Bought bacon or raw pork at a grocery store for your household between June 28, 2014 and June 30, 2018.",
+   "details": "No receipts; you attest to what you bought. Covers 24 states plus DC, so confirm your state first.",
+   "deadline": "2026-10-29",
+   "url": "https://www.overchargedforpork.com/",
+   "direct": false,
+   "stateNote": "Check state list",
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "bestway-pools",
+   "name": "Bestway above-ground pools",
+   "payout": "$40 with no receipt",
+   "who": "Bought a new Bestway pool 48 in. or taller (Power Steel, Steel Pro, Coleman Power Steel) from 2008 through 2024.",
+   "details": "$40 with no receipt, one per household, or 10% of what you paid with a receipt.",
+   "deadline": "2026-10-30",
+   "url": "https://www.poolsettlementbw.com/",
+   "direct": false,
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "connectoncall",
+   "name": "ConnectOnCall data incident",
+   "payout": "Up to $75, no documents",
+   "who": "Contacted a healthcare provider or their office after hours between May 12, 2014 and May 12, 2024.",
+   "details": "No notice needed. Up to $75 with no documents, or up to $5,000 with loss documents, plus 2 years of medical data monitoring.",
+   "deadline": "2026-11-02",
+   "url": "https://www.connectoncallsettlement.com/",
+   "direct": false,
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "forbes-trackers",
+   "name": "Forbes.com website trackers",
+   "payout": "Pro rata share of $10M",
+   "who": "California residents who visited a Forbes site between Dec 20, 2023 and June 11, 2026.",
+   "details": "Filing route for people with no Class Member ID; nothing to upload.",
+   "deadline": "2026-11-09",
+   "url": "https://www.mediasitetrackersettlement.com/",
+   "direct": false,
+   "onlyStates": [
+    "CA"
+   ],
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "cvs-privacy",
+   "name": "CVS website and app privacy",
+   "payout": "Up to $5 with no proof",
+   "who": "Used cvs.com, cvshealth.com or the CVS app in the US before July 27, 2026.",
+   "details": "This is the no-notice form. Up to $5 with no documents or $10 with proof. One per household.",
+   "deadline": "2026-11-16",
+   "url": "https://www.cvsdigitalprivacysettlement.com/form/open",
+   "direct": true,
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "raging-waters",
+   "name": "Raging Waters ticket processing fees",
+   "payout": "Pro rata, based on fees paid",
+   "who": "Bought tickets on ragingwaters.com between June 1, 2020 and June 22, 2026 and paid a processing fee.",
+   "details": "Pick the no-notice option. Claims are checked against park records, so use the contact info you bought with.",
+   "deadline": "2026-11-24",
+   "url": "https://www.ragingwaterssettlement.com/submit-claim",
+   "direct": true,
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "lsc-breach",
+   "name": "Laboratory Services Cooperative data breach",
+   "payout": "Pro rata, up to $1,000",
+   "who": "Had lab testing ordered by a Planned Parenthood health center, paid for someone's testing, or worked for LSC.",
+   "details": "Notice ID optional. Up to $5,000 if you document out-of-pocket losses.",
+   "deadline": "2026-11-24",
+   "url": "https://www.lscdatasettlement.com/submit-claim",
+   "direct": true,
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "dr-squatch",
+   "name": "Dr. Squatch \"natural\" labeling",
+   "payout": "$2.50 with no receipt",
+   "who": "Bought any Dr. Squatch product labeled \"natural\" between Nov 1, 2018 and Aug 29, 2026.",
+   "details": "$0.50 per product, up to 5 with no receipt, one per household. Choose \"I do not have a Settlement Claim ID.\"",
+   "deadline": "2026-11-27",
+   "url": "https://www.personalcareproductssettlement.com/",
+   "direct": false,
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "kroger-rx",
+   "name": "Kroger prescription pricing",
+   "payout": "Pro rata share of $17M",
+   "who": "Filled a prescription at a Kroger pharmacy (or affiliate) using insurance between Dec 9, 2018 and Aug 23, 2026.",
+   "details": "Pick the band matching your out-of-pocket spend. Under $8,000 needs no documents up front.",
+   "deadline": "2026-12-21",
+   "url": "https://www.krogersavingsclubsettlement.com/",
+   "direct": false,
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "apple-siri",
+   "name": "Apple Intelligence Siri features",
+   "payout": "$25 per iPhone, up to $95",
+   "who": "Bought an iPhone 16, 16e, 16 Plus, 16 Pro, 16 Pro Max, 15 Pro or 15 Pro Max in the US between June 10, 2024 and March 29, 2025.",
+   "details": "No notice needed. Have the serial number (Settings, General, About) or the Apple Account email or phone. One claim per device.",
+   "deadline": "2026-12-21",
+   "url": "https://www.smartphoneaisettlement.com/",
+   "direct": false,
+   "addedAt": "2026-10-02"
+  },
+  {
+   "id": "atm-surcharge",
+   "name": "Non-bank ATM surcharge fees",
+   "payout": "Pro rata share of $167.5M",
+   "who": "Paid a surcharge with a debit or ATM card at a non-bank ATM between Oct 24, 2007 and Aug 14, 2026 and wasn't fully reimbursed.",
+   "details": "Estimate how many surcharges you paid. No documents to file; the administrator can ask for statements later.",
+   "deadline": "2027-02-10",
+   "url": "https://www.nonbankatmsurchargesettlement.com/file",
+   "direct": true,
+   "addedAt": "2026-10-02"
+  }
+ ]
+}

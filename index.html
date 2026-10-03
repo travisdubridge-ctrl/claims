@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claims</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F4F6; --surface:#FFFFFF; --ink:#16222F; --muted:#5E6B78; --line:#D9DEE4;
+  --money:#17704A; --money-soft:#E2F1E9; --urgent:#B42318; --urgent-soft:#FBE7E4; --soon:#9A5B00; --soon-soft:#FDF0DC;
+  --focus:#2457C5;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#10161D; --surface:#18212B; --ink:#E7ECF1; --muted:#97A3AF; --line:#2A3542;
+    --money:#5CC896; --money-soft:#16302A; --urgent:#FF8A7A; --urgent-soft:#3A1E1B; --soon:#F0B55C; --soon-soft:#352A17; --focus:#7FA6FF;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#10161D; --surface:#18212B; --ink:#E7ECF1; --muted:#97A3AF; --line:#2A3542;
+  --money:#5CC896; --money-soft:#16302A; --urgent:#FF8A7A; --urgent-soft:#3A1E1B; --soon:#F0B55C; --soon-soft:#352A17; --focus:#7FA6FF;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:6px}
+h1{font-size:2rem;font-weight:800;letter-spacing:-0.02em;margin:0;line-height:1.1}
+.sub{color:var(--muted);font-size:.9rem;margin:4px 0 18px}
+.iconbtn{background:var(--surface);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}
+.tabs{display:flex;gap:4px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;margin-bottom:10px}
+.tabs button{flex:1;border:0;background:transparent;color:var(--muted);font:inherit;font-weight:600;font-size:.92rem;padding:9px 6px;border-radius:9px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--paper)}
+.tabs .ct{font-weight:500;opacity:.75;margin-left:4px}
+.filterline{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:.88rem;margin:6px 2px 14px}
+.filterline select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 6px}
+.filterline label{display:flex;align-items:center;gap:6px;cursor:pointer}
+.list{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.claim{display:grid;grid-template-columns:64px 1fr;gap:14px;padding:16px 16px 16px 12px;border-top:1px solid var(--line)}
+.claim:first-child{border-top:0}
+.due{text-align:center;padding-top:2px}
+.due .n{display:block;font-size:2rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-0.03em}
+.due .u{display:block;font-size:.72rem;color:var(--muted);margin-top:3px}
+.due.urgent .n{color:var(--urgent)} .due.soon .n{color:var(--soon)}
+.claim h3{margin:0;font-size:1.05rem;font-weight:700;line-height:1.3}
+.pay{margin:4px 0 0;font-weight:600;color:var(--money);font-size:.95rem}
+.who{margin:6px 0 0;color:var(--muted);font-size:.9rem}
+.flags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.flag{font-size:.75rem;font-weight:600;padding:3px 8px;border-radius:6px;background:var(--paper);color:var(--muted);border:1px solid var(--line)}
+.flag.new{background:var(--money-soft);color:var(--money);border-color:transparent}
+.flag.warn{background:var(--soon-soft);color:var(--soon);border-color:transparent}
+.flag.bad{background:var(--urgent-soft);color:var(--urgent);border-color:transparent}
+details{margin-top:8px;font-size:.9rem}
+details summary{cursor:pointer;color:var(--muted);font-weight:600;font-size:.85rem}
+details p{margin:6px 0 0}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.btn{font:inherit;font-size:.9rem;font-weight:600;border-radius:10px;padding:9px 14px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.btn.go{background:var(--money);border-color:var(--money);color:#fff}
+:root[data-theme="dark"] .btn.go{color:#0d1a14}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.go{color:#0d1a14}}
+.btn.quiet{border-color:transparent;color:var(--muted);background:transparent;padding-left:8px;padding-right:8px}
+.note{margin-top:10px;display:flex;gap:8px;align-items:center}
+.note input{flex:1;min-width:0;font:inherit;font-size:.9rem;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}
+.filedon{font-size:.85rem;color:var(--money);font-weight:600;margin-top:6px}
+.empty{padding:28px 20px;text-align:center;color:var(--muted)}
+.empty strong{display:block;color:var(--ink);font-size:1.05rem;margin-bottom:4px}
+.foot{color:var(--muted);font-size:.82rem;margin:16px 4px 0}
+/* My info sheet */
+.sheet{display:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
+.sheet.open{display:block}
+.sheet h2{margin:0 0 4px;font-size:1.1rem}
+.sheet .hint{color:var(--muted);font-size:.85rem;margin:0 0 12px}
+.field{display:grid;grid-template-columns:1fr auto;gap:6px 8px;align-items:end;margin-bottom:10px}
+.field label{grid-column:1/-1;font-size:.8rem;font-weight:600;color:var(--muted)}
+.field input,.field select{font:inherit;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);min-width:0;width:100%}
+.copy{font:inherit;font-size:.82rem;font-weight:600;padding:9px 12px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;min-width:66px}
+.copy.done{background:var(--money-soft);color:var(--money);border-color:transparent}
+.sheet .row{display:flex;gap:8px;justify-content:flex-end;margin-top:6px}
+.status{font-size:.85rem;color:var(--muted);margin-right:auto;align-self:center}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){.copy,.btn{transition:background-color .15s}}
+@media (max-width:420px){h1{font-size:1.7rem}.claim{grid-template-columns:52px 1fr;gap:10px}.due .n{font-size:1.65rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Claims</h1>
+    <button class="iconbtn" id="infoBtn" aria-expanded="false" aria-controls="sheet">My info</button>
+  </header>
+  <p class="sub" id="summary">Loading settlements…</p>
+
+  <section class="sheet" id="sheet" aria-label="My info">
+    <h2>My info</h2>
+    <p class="hint">Saved in this browser only, never uploaded. Tap Copy, then paste into the claim form.</p>
+    <div id="fields"></div>
+    <div class="row">
+      <span class="status" id="saveStatus"></span>
+      <button class="btn go" id="saveInfo">Save my info</button>
+    </div>
+  </section>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="todo" aria-selected="true">To file<span class="ct" id="ct-todo"></span></button>
+    <button role="tab" data-tab="filed" aria-selected="false">Filed<span class="ct" id="ct-filed"></span></button>
+    <button role="tab" data-tab="skipped" aria-selected="false">Skipped<span class="ct" id="ct-skipped"></span></button>
+  </nav>
+  <div class="filterline">
+    <span>Showing claims open to</span>
+    <select id="stateSel" aria-label="Your state"></select>
+    <label><input type="checkbox" id="showAll"> show other states too</label>
+  </div>
+
+  <main class="list" id="list"><div class="empty">Loading…</div></main>
+  <p class="foot" id="foot">Every claim is signed under penalty of perjury, so only file for things you actually bought or used. No receipt is fine; that's what the no-proof option is for.</p>
+</div>
+
+<script>
+const STATES=["AL","AK","AZ","AR","CA","CO","CT","DC","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"];
+const FIELDS=[["name","Full name"],["email","Email"],["phone","Phone"],["street","Street address"],["city","City"],["zip","ZIP"],["venmo","Venmo (phone or @handle)"],["paypal","PayPal email"]];
+const S={rows:[],claims:load("claims-status",{}),profile:load("claims-profile",{state:"MI"}),tab:"todo",showAll:false,ready:false,updated:null};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function load(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function store(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
+
+function daysLeft(iso){const [y,m,d]=iso.split("-").map(Number);const end=new Date(y,m-1,d);const t=new Date();t.setHours(0,0,0,0);return Math.round((end-t)/86400000)}
+function fmtDate(iso){const [y,m,d]=iso.slice(0,10).split("-").map(Number);return new Date(y,m-1,d).toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"})}
+function eligible(r,st){if(r.onlyStates&&r.onlyStates.length&&!r.onlyStates.includes(st))return false;if((r.excludeStates||[]).includes(st))return false;return true}
+function statusOf(id){return (S.claims[id]&&S.claims[id].status)||"todo"}
+function isNew(r){return r.addedAt&&daysLeft(r.addedAt)>=-3&&statusOf(r.id)==="todo"}
+
+$("stateSel").innerHTML=STATES.map(s=>`<option>${s}</option>`).join("");
+$("fields").innerHTML=FIELDS.map(([k,l])=>`<div class="field"><label for="f-${k}">${l}</label><input id="f-${k}" data-k="${k}" autocomplete="off"><button class="copy" data-copy="${k}">Copy</button></div>`).join("");
+FIELDS.forEach(([k])=>$("f-"+k).value=S.profile[k]||"");
+
+function render(){
+  const st=S.profile.state||"MI";
+  $("stateSel").value=st;
+  const live=S.rows.filter(r=>r.deadline&&daysLeft(r.deadline)>=0);
+  const visible=live.filter(r=>S.showAll||eligible(r,st));
+  const counts={todo:0,filed:0,skipped:0};
+  visible.forEach(r=>counts[statusOf(r.id)]++);
+  for(const k in counts)$("ct-"+k).textContent=counts[k]||"";
+  document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===S.tab));
+  if(!S.ready) return;
+  const todo=visible.filter(r=>statusOf(r.id)==="todo");
+  const soon=todo.filter(r=>daysLeft(r.deadline)<=14).length;
+  const fresh=todo.filter(isNew).length;
+  $("summary").textContent=(todo.length
+    ? `${todo.length} open claim${todo.length>1?"s":""} you can file${fresh?`, ${fresh} new`:""}${soon?`, ${soon} closing within two weeks`:""}.`
+    : "You're caught up on every open claim.")+(S.updated?` List checked ${fmtDate(S.updated)}.`:"");
+
+  const rows=visible.filter(r=>statusOf(r.id)===S.tab).sort((a,b)=>a.deadline.localeCompare(b.deadline));
+  if(!rows.length){
+    const msg={todo:["Nothing left to file","New settlements show up here automatically each morning."],filed:["No filed claims yet","Tap Filed on a claim after you submit it so you can track the payout."],skipped:["Nothing skipped","Skip anything that doesn't apply to you and it moves here."]}[S.tab];
+    $("list").innerHTML=`<div class="empty"><strong>${msg[0]}</strong>${msg[1]}</div>`;return;
+  }
+  $("list").innerHTML=rows.map(r=>{
+    const d=daysLeft(r.deadline), cls=d<=7?"urgent":d<=21?"soon":"";
+    const c=S.claims[r.id]||{};
+    const flags=[];
+    if(isNew(r))flags.push(`<span class="flag new">New</span>`);
+    flags.push(`<span class="flag">${r.direct?"Opens the claim form":"Opens official site, tap Submit Claim"}</span>`);
+    if(r.onlyStates&&r.onlyStates.length)flags.push(`<span class="flag ${eligible(r,st)?"":"bad"}">${r.onlyStates.join(", ")} only</span>`);
+    if(r.stateNote)flags.push(`<span class="flag warn">${esc(r.stateNote)}</span>`);
+    const actions=S.tab==="todo"
+      ?`<a class="btn go" href="${esc(r.url)}" target="_blank" rel="noopener">Open claim form</a><button class="btn" data-act="filed" data-id="${esc(r.id)}">Filed</button><button class="btn quiet" data-act="skipped" data-id="${esc(r.id)}">Skip</button>`
+      :`<a class="btn" href="${esc(r.url)}" target="_blank" rel="noopener">Open site</a><button class="btn quiet" data-act="todo" data-id="${esc(r.id)}">Move back to To file</button>`;
+    const filedBits=S.tab==="filed"?`${c.at?`<div class="filedon">Filed ${fmtDate(c.at)}</div>`:""}<div class="note"><input placeholder="Claim ID or confirmation #" value="${esc(c.note||"")}" data-note="${esc(r.id)}" aria-label="Claim ID for ${esc(r.name)}"></div>`:"";
+    return `<article class="claim">
+      <div class="due ${cls}"><span class="n">${d}</span><span class="u">${d===1?"day left":"days left"}</span></div>
+      <div>
+        <h3>${esc(r.name)}</h3>
+        <p class="pay">${esc(r.payout)}</p>
+        <p class="who">${esc(r.who)}</p>
+        <div class="flags">${flags.join("")}</div>
+        <details><summary>Details, closes ${fmtDate(r.deadline)}</summary><p>${esc(r.details)}</p></details>
+        ${filedBits}
+        <div class="actions">${actions}</div>
+      </div></article>`;
+  }).join("");
+}
+
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-tab]");
+  if(t){S.tab=t.dataset.tab;render();return}
+  const a=e.target.closest("[data-act]");
+  if(a){const id=a.dataset.id,st=a.dataset.act;
+    if(st==="todo")delete S.claims[id];
+    else S.claims[id]={...(S.claims[id]||{}),status:st,at:new Date().toISOString().slice(0,10)};
+    store("claims-status",S.claims);render();return}
+  const cp=e.target.closest("[data-copy]");
+  if(cp){const v=$("f-"+cp.dataset.copy).value;if(!v)return;copyText(v).then(()=>{cp.textContent="Copied";cp.classList.add("done");setTimeout(()=>{cp.textContent="Copy";cp.classList.remove("done")},1400)});return}
+});
+document.addEventListener("change",e=>{
+  if(e.target.dataset.note){const id=e.target.dataset.note;S.claims[id]={...(S.claims[id]||{status:"filed"}),note:e.target.value.trim()};store("claims-status",S.claims)}
+});
+$("infoBtn").onclick=()=>{const s=$("sheet");const o=!s.classList.contains("open");s.classList.toggle("open",o);$("infoBtn").setAttribute("aria-expanded",o)};
+$("showAll").onchange=e=>{S.showAll=e.target.checked;render()};
+$("stateSel").onchange=e=>{S.profile.state=e.target.value;store("claims-profile",S.profile);render()};
+$("saveInfo").onclick=()=>{
+  FIELDS.forEach(([k])=>S.profile[k]=$("f-"+k).value.trim());
+  $("saveStatus").textContent=store("claims-profile",S.profile)?"Saved on this device":"Couldn't save in this browser";
+};
+function copyText(v){
+  if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(v).catch(()=>fallbackCopy(v));
+  return Promise.resolve(fallbackCopy(v));
+}
+function fallbackCopy(v){const ta=document.createElement("textarea");ta.value=v;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy")}catch(e){}ta.remove()}
+
+fetch("settlements.json",{cache:"no-store"}).then(r=>r.json()).then(j=>{
+  S.rows=j.items||[];S.updated=j.updated||null;S.ready=true;render();
+}).catch(()=>{S.ready=true;$("summary").textContent="";$("list").innerHTML=`<div class="empty"><strong>The list didn't load</strong>Check your connection and reload.</div>`});
+render();
+</script>
+</body>
+</html>
