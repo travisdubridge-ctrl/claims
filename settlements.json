@@ -105,6 +105,20 @@
    "addedAt": "2026-10-02"
   },
   {
+   "id": "skin360-bipa",
+   "name": "Neutrogena Skin360 face scan privacy",
+   "payout": "Pro rata share of $4.7M",
+   "who": "Did a Skin360 face scan skin assessment (Neutrogena, NeoStrata or other Skin360) while in Illinois between Dec 9, 2019 and May 5, 2023.",
+   "details": "No proof needed to file; the administrator may ask later for an Illinois ID or utility bill. Have your approximate dates of use ready.",
+   "deadline": "2026-11-25",
+   "url": "https://www.skin360bipasettlement.com/",
+   "direct": false,
+   "onlyStates": [
+    "IL"
+   ],
+   "addedAt": "2026-10-03"
+  },
+  {
    "id": "dr-squatch",
    "name": "Dr. Squatch \"natural\" labeling",
    "payout": "$2.50 with no receipt",
