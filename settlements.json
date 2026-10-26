@@ -1,17 +1,6 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-26",
   "items": [
-    {
-      "id": "vsl3",
-      "name": "VSL#3 probiotic",
-      "payout": "$20 with no receipt",
-      "who": "Bought VSL#3 probiotic in the US between June 1, 2016 and June 19, 2019.",
-      "details": "No proof: $20 for one unit, one per household. With receipts: up to $800.",
-      "deadline": "2026-10-20",
-      "url": "https://www.vsl3lawsuit.com/",
-      "direct": false,
-      "addedAt": "2026-10-02"
-    },
     {
       "id": "pork",
       "name": "Pork price-fixing (bacon, raw pork)",
@@ -166,6 +155,34 @@
       "excludeStates": [],
       "stateNote": "",
       "addedAt": "2026-10-19"
+    },
+    {
+      "onlyStates": [],
+      "excludeStates": [],
+      "stateNote": "",
+      "direct": false,
+      "addedAt": "2026-10-26",
+      "id": "goodrx-privacy",
+      "name": "GoodRx $32M User Privacy Settlement",
+      "payout": "Equal share of the fund, amount not set yet",
+      "who": "People in the U.S. who used a GoodRx website, app or service (GoodRx, GoodRx Gold, HeyDoctor, GoodRx Care) before April 20, 2024.",
+      "details": "Not verified on official site, check the form. Trackers say no documents are needed. If you did not get a notice, use the 'file without notice' option on the site. The site was reported down in mid October, so retry if it does not load.",
+      "deadline": "2026-12-29",
+      "url": "https://goodrxprivacysettlement.com/"
+    },
+    {
+      "onlyStates": [],
+      "excludeStates": [],
+      "stateNote": "",
+      "direct": false,
+      "addedAt": "2026-10-26",
+      "id": "thinkware-dashcam",
+      "name": "Thinkware Dashcam $850K Settlement",
+      "payout": "Pro rata cash, one camera with no receipt",
+      "who": "U.S. buyers of Thinkware X700, F200PRO, DC-M2-FG-IR, DC-M2-FG or F70PRO dashcams between Jan 25, 2019 and Aug 31, 2024.",
+      "details": "Claim ID is optional. Without one you list the model, purchase place, date and serial number. Claiming more than one camera needs proof of purchase.",
+      "deadline": "2026-12-14",
+      "url": "https://www.twcamerasettlement.com/"
     }
   ]
 }
