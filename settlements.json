@@ -1,29 +1,6 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "items": [
-    {
-      "id": "pork",
-      "name": "Pork price-fixing (bacon, raw pork)",
-      "payout": "Pro rata share of $117M",
-      "who": "Bought bacon or raw pork at a grocery store for your household between June 28, 2014 and June 30, 2018.",
-      "details": "No receipts; you attest to what you bought. Covers 24 states plus DC, so confirm your state first.",
-      "deadline": "2026-10-29",
-      "url": "https://www.overchargedforpork.com/",
-      "direct": false,
-      "stateNote": "Check state list",
-      "addedAt": "2026-10-02"
-    },
-    {
-      "id": "bestway-pools",
-      "name": "Bestway above-ground pools",
-      "payout": "$40 with no receipt",
-      "who": "Bought a new Bestway pool 48 in. or taller (Power Steel, Steel Pro, Coleman Power Steel) from 2008 through 2024.",
-      "details": "$40 with no receipt, one per household, or 10% of what you paid with a receipt.",
-      "deadline": "2026-10-30",
-      "url": "https://www.poolsettlementbw.com/",
-      "direct": false,
-      "addedAt": "2026-10-02"
-    },
     {
       "id": "connectoncall",
       "name": "ConnectOnCall data incident",
