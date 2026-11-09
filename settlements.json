@@ -1,17 +1,6 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-09",
   "items": [
-    {
-      "id": "connectoncall",
-      "name": "ConnectOnCall data incident",
-      "payout": "Up to $75, no documents",
-      "who": "Contacted a healthcare provider or their office after hours between May 12, 2014 and May 12, 2024.",
-      "details": "No notice needed. Up to $75 with no documents, or up to $5,000 with loss documents, plus 2 years of medical data monitoring.",
-      "deadline": "2026-11-02",
-      "url": "https://www.connectoncallsettlement.com/",
-      "direct": false,
-      "addedAt": "2026-10-02"
-    },
     {
       "id": "forbes-trackers",
       "name": "Forbes.com website trackers",
@@ -160,6 +149,22 @@
       "details": "Claim ID is optional. Without one you list the model, purchase place, date and serial number. Claiming more than one camera needs proof of purchase.",
       "deadline": "2026-12-14",
       "url": "https://www.twcamerasettlement.com/"
+    },
+    {
+      "id": "bigelow-tea",
+      "name": "Bigelow Tea \"Made in USA\" labeling",
+      "payout": "$10 per household with no receipt",
+      "who": "Bought an 18 or 20 count box of certain Bigelow teas labeled \"100% American Family Owned\" at a California store between Oct 17, 2017 and July 31, 2023.",
+      "details": "$0.50 per box, up to 20 boxes with no proof. Up to $20 with a receipt. No notice ID needed.",
+      "deadline": "2027-02-08",
+      "url": "https://www.teaclassaction.com/claim",
+      "direct": false,
+      "onlyStates": [
+        "CA"
+      ],
+      "excludeStates": [],
+      "stateNote": "",
+      "addedAt": "2026-11-09"
     }
   ]
 }
