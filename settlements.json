@@ -1,20 +1,6 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-16",
   "items": [
-    {
-      "id": "forbes-trackers",
-      "name": "Forbes.com website trackers",
-      "payout": "Pro rata share of $10M",
-      "who": "California residents who visited a Forbes site between Dec 20, 2023 and June 11, 2026.",
-      "details": "Filing route for people with no Class Member ID; nothing to upload.",
-      "deadline": "2026-11-09",
-      "url": "https://www.mediasitetrackersettlement.com/",
-      "direct": false,
-      "onlyStates": [
-        "CA"
-      ],
-      "addedAt": "2026-10-02"
-    },
     {
       "id": "cvs-privacy",
       "name": "CVS website and app privacy",
@@ -165,6 +151,34 @@
       "excludeStates": [],
       "stateNote": "",
       "addedAt": "2026-11-09"
+    },
+    {
+      "id": "bestway-pool",
+      "name": "Bestway Above-Ground Pool ($15M)",
+      "payout": "$40 with no receipt, or 10% of price with proof",
+      "who": "People in the US who bought a Bestway above-ground pool 48 inches or taller (Power Steel, Steel Pro, Coleman Power Steel) with outside compression straps, sold 2008 to 2024.",
+      "details": "Deadline was extended to Nov 19. Choose the no-receipt option and enter the pool model or serial number. A claim ID is optional per trackers, check the form.",
+      "deadline": "2026-11-19",
+      "url": "https://www.poolsettlementbw.com/",
+      "direct": false,
+      "onlyStates": [],
+      "excludeStates": [],
+      "stateNote": "",
+      "addedAt": "2026-11-16"
+    },
+    {
+      "id": "generic-drugs-ag",
+      "name": "Generic Prescription Drug Price-Fixing (State AGs)",
+      "payout": "Equal share of fund with the simple option, no purchase info needed",
+      "who": "People who bought certain generic prescription drugs in the US between May 2009 and Dec 2019.",
+      "details": "Pick Claim Option 1, which only needs you to certify you bought the drugs. Check the drug list on the site. Residents of AL, AR, HI, TX get a fixed payment.",
+      "deadline": "2027-03-08",
+      "url": "https://aggenericdrugsclaims.com/english/file-a-claim/PageControl/InformationPage",
+      "direct": true,
+      "onlyStates": [],
+      "excludeStates": [],
+      "stateNote": "",
+      "addedAt": "2026-11-16"
     }
   ]
 }
